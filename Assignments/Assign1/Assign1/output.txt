@@ -1,0 +1,86 @@
+[rkomoran@id415m33 Assign1]$ gcc testing.c readVals.c printReversed.c printNum.c printArr.c convertInt.c calculator.c addReversedInt.c -o prog1
+[rkomoran@id415m33 Assign1]$ ./prog1
+Example 1 Tests:
+First Test:     Hello World
+
+Second Test:    I'm in CS2263!
+
+Third Test:     My name is Rinor
+
+Second Example Tests:
+
+First Test:
+Reversed number of 2263: 3622
+
+Second Test:
+Reversed number of 1234: 4321
+
+Third Test:
+Reversed number of 5656: 6565
+
+Third Example Tests:
+
+First Test:
+Integer to be converted:  321
+Converted integer: 123
+
+Second Test:
+Integer to be converted:  836
+Converted integer: 638
+
+Third Test:
+Integer to be converted:  991
+Converted integer: 199
+
+Fourth Example Tests:
+
+First Test:
+
+Values to be added:
+
+First Value: 321
+Second Value: 654
+Sum of reversed integers: 579
+
+Second Test:
+
+Values to be added:
+
+First Value: 718
+Second Value: 71
+Sum of reversed integers: 834
+
+Third Test:
+
+Values to be added:
+
+First Value: 199
+Second Value: 3998
+Sum of reversed integers: 9984
+
+Fifth Example Tests
+
+First Test:
+
+Enter two unsigned integer numbers in reverse order to be calculated: 
+321
+52
+Result of the two numbers provided: 
+841
+
+Second Test:
+
+Enter two unsigned integer numbers in reverse order to be calculated: 
+456
+32
+Result of the two numbers provided: 
+776
+
+Third Test:
+
+Enter two unsigned integer numbers in reverse order to be calculated: 
+153
+89
+Result of the two numbers provided: 
+944
+[rkomoran@id415m33 Assign1]$ 
