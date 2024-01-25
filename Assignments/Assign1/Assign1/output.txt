@@ -1,13 +1,13 @@
 [rkomoran@id415m33 Assign1]$ gcc testing.c readVals.c printReversed.c printNum.c printArr.c convertInt.c calculator.c addReversedInt.c -o prog1
 [rkomoran@id415m33 Assign1]$ ./prog1
-Example 1 Tests:
+***First Example Tests***
 First Test:     Hello World
 
 Second Test:    I'm in CS2263!
 
 Third Test:     My name is Rinor
 
-Second Example Tests:
+***Second Example Tests***
 
 First Test:
 Reversed number of 2263: 3622
@@ -18,7 +18,7 @@ Reversed number of 1234: 4321
 Third Test:
 Reversed number of 5656: 6565
 
-Third Example Tests:
+***Third Example Tests***
 
 First Test:
 Integer to be converted:  321
@@ -32,7 +32,7 @@ Third Test:
 Integer to be converted:  991
 Converted integer: 199
 
-Fourth Example Tests:
+***Fourth Example Tests***
 
 First Test:
 
@@ -58,7 +58,7 @@ First Value: 199
 Second Value: 3998
 Sum of reversed integers: 9984
 
-Fifth Example Tests
+***Fifth Example Tests***
 
 First Test:
 
