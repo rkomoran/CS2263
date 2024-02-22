@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <stdbool.h>
+#define MAXSIZE 100000
 
-// from Assgn 1
 void printArr(char a[], int n)
 {
     int i;
@@ -13,26 +13,28 @@ void printArr(char a[], int n)
     putchar('\n');
 }
 
-int main()
+void readTag(char * tag)
 {
-    int c;
-    int index = 0;
-    char tag[100000];
-    // this reads in data from stdin
+    int c, i = 0;
     while ((c = getchar()) != EOF)
     {
-        // check if in opening tag
-        // ignore if it is a comment
-        if (c == '<' && (c = getchar() != '!'))
+        if (c == '<')
         {
-            while ((c = getchar()) != EOF && c != '>')
+            tag[i++] = c;
+            while ((c = getchar()) != EOF && c != '>' && c != '!')
             {
-                tag[index] = c;
-                index++;
+                tag[i++] = c;
             }
+            tag[i++] = '>';
+            tag[i++] = '\n';   
         }
+        tag[i++] = '\0';
     }
-    tag[index] = '\0';
-    printArr(tag, index);
+    printArr(tag, i);
 }
 
+int main(void)
+{
+    char tag[MAXSIZE];
+    readTag(tag);
+}
