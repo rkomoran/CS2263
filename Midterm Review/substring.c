@@ -10,7 +10,7 @@ int main (int argc, char ** argv)
     /* if needle & haystack are not supplied */
     if (argc < 3)
     {
-        printf("retard");
+        printf("more inputs pls");
         return EXIT_FAILURE;
     }
 
