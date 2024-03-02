@@ -9,6 +9,7 @@
 - [Question 2](#question-2)
 - [Question 3](#question-3)
 - [Question 4](#question-4)
+- [Question 5](#question-5)
 
 <div style="page-break-after: always;"></div>
 
@@ -46,7 +47,7 @@ void readFile(char *filename)
     // *** attempting to read inbetween htags ***
     bool inTag = false, inComment = false;
     int index = 0, unique_words_count = 0, opener = '<', closer = '>', c;
-    char word[MAX] = "", unique_words[MAX][MAX] = {" "}; 
+    char word[MAX * 10] = "", unique_words[MAX][MAX] = {" "}; 
 
     while ((c = fgetc(file)) != EOF)
     {
@@ -132,10 +133,11 @@ int main(int argc, char **argv)
     return EXIT_SUCCESS;
 }
 ```
+<div style="page-break-after: always;"></div>
 
 ## Question 3
 
-```
+```html
 rinor@rinors-mac Assgn3 % ./readInTest test.html   
 Unique words between HTML tags:
 <html>
@@ -144,10 +146,11 @@ Unique words between HTML tags:
 </html>
 rinor@rinors-mac Assgn3 % 
 ```
+<div style="page-break-after: always;"></div>
 
 ## Question 4
 
-```
+```html
 rinor@rinors-mac Assgn3 % ./readInTest A3W2024.html
 Unique words between HTML tags:
 <html>
@@ -178,13 +181,14 @@ none'>
 </a>
 <span style='font-family:"Times New Roman",serif'>
 <p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
-0cm;margin-left:0cm;margin-bottom:.0001pt;text-indent:0cm;line-height:12.0pt'>
+0cm;margin-left:<i>
 <i>
 <span
 style='font-family:"Times New Roman",serif'>
 </i>
 <p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
-0cm;margin-left:7.1pt;margin-bottom:.0001pt;text-indent:0cm;line-height:12.0pt'>
+0cm;margin-left:<span
+lang=EN-US style='font-family:"Times New Roman",serif'>
 <span
 lang=EN-US style='font-family:"Times New Roman",serif'>
 <span lang=EN-US style='font-family:"Courier New"'>
@@ -192,24 +196,77 @@ lang=EN-US style='font-family:"Times New Roman",serif'>
 style='font-family:"Courier New"'>
 <span
 lang=EN-US style='font-family:"Courier New"'>
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:<span
+lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman",serif'>
 <span
 lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman",serif'>
 <span lang=EN-US style='font-size:14.0pt;
 font-family:"Times New Roman",serif'>
 <p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
-0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
-12.0pt'>
+0cm;margin-left:<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:<span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:<span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>
 <span
 lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>
 <span lang=EN-US style='font-family:
 "Courier New"'>
 <p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
-12.0pt;margin-left:43.1pt;text-indent:-18.0pt;line-height:12.0pt'>
+0cm;margin-left:<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+12.0pt;margin-le<br>
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+12.0pt;margin-le<br>
 <br>
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:<p class=MsoBodyTextIndent style='margin-top:6.0pt;text-indent:0cm;line-height:
+12.0pt'>
 <p class=MsoBodyTextIndent style='margin-top:6.0pt;text-indent:0cm;line-height:
 12.0pt'>
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:</div>
 </div>
 </body>
 </html>
 rinor@rinors-mac Assgn3 % 
 ```
+
+<div style="page-break-after: always;"></div>
+
+## Question 5
+
+This is the output of the __htags2__ program from the Assignment 2 example tags:
+
+### Input
+```html
+<body lang=EN-CA link=blue vlink="#954F72">
+<div class=WordSection1>
+<p class=MsoNormal>
+<b>
+<span lang=EN-US style='font-size:14.0pt;font-family: "Times New Roman",serif'>
+</span>
+</b>
+</p>
+<p class=MsoNormal>
+<b>
+<span lang=EN-US style='font-size:14.0pt;font-family: "Times New Roman",serif'>
+</span>
+</b>
+</p>
+```
+
+### htags2 Output
+```html
+Unique words between HTML tags:
+<body lang=EN-CA link=blue vlink="#954F72">
+<div class=WordSection1>
+<p class=MsoNormal>
+<b>
+<span lang=EN-US style='font-size:14.0pt;font-family: "Times New Roman",serif'>
+</span>
+</b>
+</p>
+rinor@rinors-mac Assgn3 %
+``` 

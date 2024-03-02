@@ -18,7 +18,7 @@ void readFile(char *filename)
     // *** attempting to read inbetween htags ***
     bool inTag = false, inComment = false;
     int index = 0, unique_words_count = 0, opener = '<', closer = '>', c;
-    char word[MAX] = "", unique_words[MAX][MAX] = {" "}; 
+    char word[MAX * 10] = "", unique_words[MAX][MAX] = {" "}; 
 
     while ((c = fgetc(file)) != EOF)
     {
