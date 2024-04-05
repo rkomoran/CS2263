@@ -1,0 +1,242 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Times;
+	panose-1:0 0 5 0 0 0 0 2 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:Times;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-link:"Body Text Indent Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	text-indent:-1.0cm;
+	font-size:12.0pt;
+	font-family:Times;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+span.BodyTextIndentChar
+	{mso-style-name:"Body Text Indent Char";
+	mso-style-link:"Body Text Indent";
+	font-family:Times;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-CA link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:14.0pt;font-family:
+"Times New Roman",serif'>CS 2263</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:14.0pt;font-family:
+"Times New Roman",serif'>Assignment 2</span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:14.0pt;font-family:
+"Times New Roman",serif'>Due: Feb. 21, 2024 (before midnight) </span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-family:"Times New Roman",serif'>_______________________________________________________</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-family:"Times New Roman",serif'>Assignments
+are to be completed individually (<b>not</b> as a group work).</span></u></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>Sample
+reference: <a href="https://www.educba.com/types-of-tags-in-html/"><span
+style='text-decoration:none'>https://www.educba.com/types-of-tags-in-html/</span></a>
+</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-indent:0cm;line-height:12.0pt'><i><span
+style='font-family:"Times New Roman",serif'>Processing strings</span></i></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:7.1pt;margin-bottom:.0001pt;text-indent:0cm;line-height:12.0pt'><span
+lang=EN-US style='font-family:"Times New Roman",serif'>Develop and test two
+utility programs called “htags1” and “htext1” to process an HTML file. The </span><span
+lang=EN-US style='font-family:"Courier New"'>htags1</span><span lang=EN-US
+style='font-family:"Times New Roman",serif'> program should &nbsp;print all
+HTML tags, <b>except</b> the HTML comment tags &lt;!-- --&gt;, one per line of
+output. The </span><span lang=EN-US style='font-family:"Courier New"'>htext1</span><span
+lang=EN-US style='font-family:"Times New Roman",serif'> program should print
+all plain text extracted from the source HTML file, i.e. just the text, no
+tags. The utility programs should read form standard input and may use the <a
+href="https://linuxcommand.org/lc3_lts0070.php">input redirection</a> to access
+a file. (This means that your program code should read from standard input, and
+NOT perform any file operations, like fopen() etc. You may capture the output
+from your program using output redirection, or you may just output to the
+terminal window and print the screen, your choice.)</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:7.1pt;margin-bottom:.0001pt;text-indent:18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>Assume an
+HTML tag is any text enclosed between &lt; and &gt;, including these delimiter
+characters. The end tags, like &lt;/p&gt;, are valid tags. For example, in a
+sample input HTML file containing:</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:25.1pt;margin-bottom:.0001pt;text-indent:18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'><br>
+&lt;body lang=EN-CA link=blue vlink=&quot;#954F72&quot;&gt;<br>
+&lt;div class=WordSection1&gt;<br>
+&lt;p class=MsoNormal&gt;&lt;b&gt;&lt;span lang=EN-US
+style='font-size:14.0pt;font-family: &quot;Times New Roman&quot;,serif'&gt;CS
+2263&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;<br>
+&lt;p class=MsoNormal&gt;&lt;b&gt;&lt;span lang=EN-US
+style='font-size:14.0pt;font-family: &quot;Times New
+Roman&quot;,serif'&gt;Assignment 2&lt;/span&gt;&lt;/b&gt;&lt;/p&gt;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:25.1pt;margin-bottom:.0001pt;text-indent:18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'><br>
+we find the following tags: <br>
+<br>
+&lt;body lang=EN-CA link=blue vlink=&quot;#954F72&quot;&gt;<br>
+&lt;div class=WordSection1&gt;<br>
+&lt;p class=MsoNormal&gt;<br>
+&lt;b&gt;<br>
+&lt;span lang=EN-US style='font-size:14.0pt;font-family: &quot;Times New
+Roman&quot;,serif'&gt; <br>
+&lt;/span&gt;<br>
+&lt;/b&gt;<br>
+&lt;/p&gt;<br>
+&lt;p class=MsoNormal&gt;<br>
+&lt;b&gt;<br>
+&lt;span lang=EN-US style='font-size:14.0pt;font-family: &quot;Times New
+Roman&quot;,serif'&gt; <br>
+&lt;/span&gt;<br>
+&lt;/b&gt;<br>
+&lt;/p&gt; <br>
+<br>
+and the plain text in this sample input is: <br>
+<br>
+CS 2263 Assignment 2</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:7.1pt;margin-bottom:.0001pt;text-indent:0cm;line-height:12.0pt'><span
+lang=EN-US style='font-family:"Times New Roman",serif'><br>
+When outputting the plain text you may keep new line characters present in the
+input, or you may replace them with space characters. <br>
+<br>
+The data to your program should be read from standard input (use the input
+redirection to read from the HTML file) using the </span><b><span lang=EN-US
+style='font-family:"Courier New"'>getchar()</span></b><span lang=EN-US
+style='font-family:"Times New Roman",serif'> function. The output should be
+done using the </span><b><span lang=EN-US style='font-family:"Courier New"'>putchar()</span></b><span
+lang=EN-US style='font-family:"Times New Roman",serif'> function and/or using
+the </span><b><span lang=EN-US style='font-family:"Courier New"'>printArr()</span></b><span
+lang=EN-US style='font-family:"Times New Roman",serif'> function from Assignment
+1. You must use the </span><span lang=EN-US style='font-family:"Courier New"'>printArr()</span><span
+lang=EN-US style='font-family:"Times New Roman",serif'> function at least once in
+each utility program developed for this assignment. The Assignment Report
+should consist of the following parts/exercises:</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>1.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-family:"Times New Roman",serif'>In a few
+sentences describe the design of the htags1 program. Focus on the description of
+the algorithm used and of any data structures needed to complete the task.</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>2.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Times New Roman",serif'>Show the <u>complete</u>
+source code for htags1.</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>3.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-family:"Times New Roman",serif'>In a few
+sentences describe the design of the htext1 program. Focus on the description of
+the algorithm used and of any data structures needed to complete the task. </span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>4.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Times New Roman",serif'>Show the <u>complete</u>
+source code for htext1.</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+12.0pt;margin-left:43.1pt;text-indent:-18.0pt;line-height:12.0pt'><span
+lang=EN-US style='font-family:"Times New Roman",serif'>5.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Times New Roman",serif'>Show the output from
+running htags1 and htext1 programs on the following input HTML code (store it
+in a file and use input redirection to read): <br>
+<br>
+&lt;html&gt; &lt;b&gt; TEST &lt;/b&gt; &lt;/html&gt;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>6.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Times New Roman",serif'>Show the output from
+running htags1 and htext1 program on this HTML file, i.e. the very file
+describing this assignment: you need to download this file separately from D2L
+to your computer</span><span lang=EN-US style='font-family:"Times New Roman",serif'>
+(do not download the entire D2L web page!). The file name is A2W2024.html.&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:43.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>7.</span><span
+lang=EN-US style='font-size:7.0pt;font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Times New Roman",serif'>Show the output from
+running htags1 and htext1 program on another HTML file, of your choice.</span><span
+lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;text-indent:0cm;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:6.0pt;text-indent:0cm;line-height:
+12.0pt'><span lang=EN-US style='font-family:"Times New Roman",serif'>Submit a
+SINGLE PDF FILE with your Assignment Report and it should include: a heading
+for each exercise 1 to 7, including the source code of each completed program
+and the screenshots of the terminal window (or the contents of the file with the
+redirected program output) showing the test runs. In case of multiple
+submission the most recent item in your Dropbox will be graded.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
