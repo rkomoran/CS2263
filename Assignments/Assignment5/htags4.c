@@ -104,6 +104,7 @@ int main(int argc, char ** argv)
                 // check if word exists already in list
                 else if (List_search(head, n))
                 {
+                                                        //should be size of Node, not n
                     currentAllocation = newAllocation + (sizeof(n) + (sizeof(n->tag)));
                     totalToPrint += currentAllocation;
                     head = List_add(head, n);
